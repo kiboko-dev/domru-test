@@ -9,18 +9,6 @@ use Tests\TestCase;
 
 class LogicTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
     public function test_calc()
     {
         $c = new CurrencyController();
@@ -33,14 +21,14 @@ class LogicTest extends TestCase
     {
         $do = CurrencyController::getSymbol('RUR');
         dump($do);
-        $this->assertTrue(true);
+        $this->assertIsString($do);
     }
 
     public function test_getFromToData()
     {
         $do = CurrencyController::getCurrenciesData('RUR','USD');
         dump($do);
-        $this->assertTrue(true);
+        $this->assertIsArray($do);
     }
 
     public function test_GetList()
