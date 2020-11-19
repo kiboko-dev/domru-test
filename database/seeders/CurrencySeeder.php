@@ -28,6 +28,12 @@ class CurrencySeeder extends Seeder
                 'amount'    =>  CurrencyController::getRates('EUR'),
                 'created_at'    =>  Carbon::now(),
                 'updated_at'    =>  Carbon::now(),
+            ],
+            [
+                'code'  =>  'RUR',
+                'amount'    =>  1,
+                'created_at'    =>  Carbon::now(),
+                'updated_at'    =>  Carbon::now(),
             ]
         ]);
     }
